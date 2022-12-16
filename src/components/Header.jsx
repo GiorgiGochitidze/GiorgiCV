@@ -10,7 +10,6 @@ const Header = () => {
     //menu
     const [menu, setMenu] = useState(false)
     const [light, setLight] = useState(true)
-    const [dark, setDark] = useState(false)
     //texts
     const [home, setHome] = useState(true)
     const [skills, setSkills] = useState(true)
@@ -39,7 +38,6 @@ const Header = () => {
                         {home && <p style={{cursor: "pointer"}} onClick={homedown}>HOME</p>}
                           {skills && <p onClick={skilldown} style={{cursor: "pointer"}}>SKILLS</p>}
                         {contact && <p onClick={contactdown} style={{cursor: "pointer"}}>Contact Me</p>}
-                        <Link to="/"><p style={{marginRight: '5px'}}>EN</p></Link>
                     </div>
                         <h3 onClick={() => menu ? setMenu(false) : setMenu(true)} className='menu-button'>MENU</h3>
                 </nav>
@@ -61,9 +59,6 @@ const Header = () => {
             </>
             </div>
         }
-        <Routes>
-          <Route path="/" element={<Home1 />} />
-        </Routes>
     </>
 
      );
